@@ -1,0 +1,49 @@
+/* Move profile picture to header left of title, and make it circular */
+.header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding-left: 5vw;
+}
+
+.header-custom img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #444;
+  object-fit: cover;
+  border: 3px solid #222;
+}
+
+/* Override Cayman theme for dark mode */
+:root {
+  --header-bg: linear-gradient(90deg,#232526 0,#1e3c72 100%);
+  --header-text: #f1f1f1;
+  --header-subtext: #a1a1a1;
+  --body-bg: #171717;
+  --body-text: #e2e2e2;
+  --link-color: #44b0ff;
+}
+
+.page-header {
+  background: var(--header-bg) !important;
+  color: var(--header-text) !important;
+}
+
+.page-header .project-name {
+  color: var(--header-text) !important;
+}
+
+.page-header .project-tagline {
+  color: var(--header-subtext) !important;
+}
+
+body {
+  background: var(--body-bg) !important;
+  color: var(--body-text) !important;
+}
+
+a {
+  color: var(--link-color) !important;
+}
