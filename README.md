@@ -9,8 +9,6 @@
 </div>
 
 
-new
-
 I am a sophomore at Texas Tech University studying Computer Engineering (Undergrad) and Software & Security Engineering (Grad)
 
 I’m a software developer passionate about building great things.  
