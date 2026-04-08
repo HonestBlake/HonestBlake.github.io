@@ -1,17 +1,18 @@
-/* Hide Cayman default header text/link */
+/* Kill Cayman top header/link area */
+.site-header,
+.site-title,
 .project-name,
 .project-tagline,
 .page-header {
   display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
-  min-height: 0 !important;
   border: 0 !important;
 }
 
-.site-title { display: none !important; }
-
-/* Remove container width limit so your custom header can go edge-to-edge */
+/* Remove default centered page constraints */
 .main-content {
   max-width: none !important;
   width: 100% !important;
@@ -19,28 +20,39 @@
   padding: 0 !important;
 }
 
-/* Full browser-width header */
+/* Full-width hero strip */
 .custom-header {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 36px 8vw;
-  box-sizing: border-box;
   background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  padding: 36px 0;
+  box-sizing: border-box;
 }
 
-/* 150x150 square image */
+/* Center inner hero content as one block */
+.custom-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the whole image+text block */
+  gap: 40px;
+}
+
+/* image left of center */
 .custom-header img {
-  width: 150px !important;
-  height: 150px !important;
-  border-radius: 0 !important;
+  width: 150px;
+  height: 150px;
+  border-radius: 0;
   object-fit: cover;
   border: 4px solid rgba(0,0,0,0.25);
 }
 
-/* Header text */
+/* text */
+.header-info {
+  text-align: center;
+}
 .header-info h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
@@ -53,7 +65,7 @@
   color: #d9eeff;
 }
 
-/* Body dark theme + readable content padding */
+/* page */
 body {
   background: #171717 !important;
   color: #e2e2e2 !important;
