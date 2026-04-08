@@ -1,7 +1,5 @@
-<!-- Link to your custom CSS -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Custom gradient header with profile pic and title info -->
 <div class="custom-header">
   <img src="profile_pic.png" alt="Profile picture">
   <div class="header-info">
@@ -10,14 +8,9 @@
   </div>
 </div>
 
+<div class="main-content">
 
-# Blake Worthington
-
-<img src="./profile_pic.png" alt="My profile picture" width="150" />
-
-Welcome to my personal website!
-
-I am a sophmore at Texas Tech Univeristy studying Computer Engineering (Undergrad) and Software & Security Engineering (Grad)
+I am a sophomore at Texas Tech University studying Computer Engineering (Undergrad) and Software & Security Engineering (Grad)
 
 I’m a software developer passionate about building great things.  
 Feel free to connect with me!
@@ -30,3 +23,5 @@ Links:
 - [GitHub](https://github.com/HonestBlake)
 - [LinkedIn](https://www.linkedin.com/in/honestblake)
 - [My Resume](resume.pdf)
+
+</div>
