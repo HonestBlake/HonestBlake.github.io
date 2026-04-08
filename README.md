@@ -1,7 +1,7 @@
-<!-- LINK TO CUSTOM CSS -->
+<!-- Link to your custom CSS -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Custom header with gradient, pic left, title right -->
+<!-- Custom gradient header with profile pic and title info -->
 <div class="custom-header">
   <img src="profile_pic.png" alt="Profile picture">
   <div class="header-info">
@@ -9,8 +9,6 @@
     <p>Welcome to my personal website and portfolio!</p>
   </div>
 </div>
-
-<div class="main-content">
 
 
 # Blake Worthington
