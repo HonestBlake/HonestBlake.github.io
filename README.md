@@ -1,3 +1,17 @@
+<!-- Add custom CSS -->
+<link rel="stylesheet" href="custom.css">
+
+<!-- Custom header with profile pic and text -->
+<div class="header-custom">
+  <img src="/profile.jpg" alt="Profile Picture">
+  <div>
+    <h1 style="margin: 0; color: var(--header-text);">HonestBlake</h1>
+    <div style="color: var(--header-subtext);font-size:1.5em;font-weight:400;">Welcome to my personal website!</div>
+  </div>
+</div>
+
+
+
 # Blake Worthington
 
 <img src="./profile_pic.png" alt="My profile picture" width="150" />
