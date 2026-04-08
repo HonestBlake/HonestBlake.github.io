@@ -7,15 +7,10 @@ I’m a software developer passionate about building great things.
 Feel free to connect with me!
 
 Contact:
-
-  Email: blakecworthington@gmail.com
-
-  Phone: 541-261-9127
+- Email: blakecworthington@gmail.com
+- Phone: 541-261-9127
 
 Links:
-
-  [GitHub](https://github.com/HonestBlake)
-  
-  [LinkedIn](https://www.linkedin.com/in/honestblake)
-  
-  [My Resume](resume.pdf)
+- [GitHub](https://github.com/HonestBlake)
+- [LinkedIn](https://www.linkedin.com/in/honestblake)
+- [My Resume](resume.pdf)
