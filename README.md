@@ -8,8 +8,6 @@
   </div>
 </div>
 
-<div class="main-content">
-
 I am a sophomore at Texas Tech University studying Computer Engineering (Undergrad) and Software & Security Engineering (Grad)
 
 I’m a software developer passionate about building great things.  
@@ -24,4 +22,3 @@ Links:
 - [LinkedIn](https://www.linkedin.com/in/honestblake)
 - [My Resume](resume.pdf)
 
-</div>
