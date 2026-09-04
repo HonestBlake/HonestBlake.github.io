@@ -1,45 +1,134 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blake Worthington</title>
-  <link rel="stylesheet" href="custom.css" />
-</head>
-<body>
-  <header class="custom-header">
-    <div class="custom-header-inner">
-      <img src="profile_pic.png" alt="Profile picture" />
-      <div class="header-info">
-        <h1>Blake Worthington</h1>
-        <p>Welcome to my personal website and portfolio!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Blake Worthington, a computer engineering and software security student building reliable software, cloud, and embedded systems."
+    />
+    <meta name="theme-color" content="#071014" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blake Worthington | Computer & Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software logic. Hardware instincts. Explore Blake Worthington's engineering work, experience, and résumé."
+    />
+    <meta property="og:url" content="https://www.honestblake.com/" />
+    <meta property="og:image" content="https://www.honestblake.com/profile_pic.png" />
+    <meta property="og:image:alt" content="Portrait of Blake Worthington" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="canonical" href="https://www.honestblake.com/" />
+    <link rel="stylesheet" href="custom.css" />
+    <title>Blake Worthington | Computer & Software Engineer</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="Blake Worthington, back to top">
+          <span class="brand-mark" aria-hidden="true">B/W</span>
+          <span class="brand-copy">
+            <strong>Blake Worthington</strong>
+            <small>Computer + Software Engineering</small>
+          </span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#resume">Résumé</a>
+        </nav>
+
+        <a class="nav-contact" href="#contact">Let's talk</a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="content">
-    <p>
-      I am a sophomore at Texas Tech University studying Computer Engineering
-      (Undergrad) and Software & Security Engineering (Grad).
-    </p>
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid page-shell">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Lubbock, Texas · Texas Tech</p>
+            <h1 id="hero-title">
+              I build reliable systems
+              <span>across software, cloud &amp; hardware.</span>
+            </h1>
+            <p class="hero-intro">
+              Computer Engineering undergraduate and Software &amp; Security Engineering graduate student turning complex
+              technical problems into products that work in the real world.
+            </p>
 
-    <p>
-      I’m a software developer passionate about building great things.<br />
-      Feel free to connect with me!
-    </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">
+                Explore my work
+                <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  <path d="M4 10h11m-4-4 4 4-4 4" />
+                </svg>
+              </a>
+              <a class="button button-ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                View résumé
+              </a>
+            </div>
 
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: blakecworthington@gmail.com</li>
-      <li>Phone: 541-261-9127</li>
-    </ul>
+            <ul class="hero-links" aria-label="Professional links">
+              <li>
+                <a href="https://github.com/HonestBlake" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/honestblake" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li><a href="mailto:blakecworthington@gmail.com">Email</a></li>
+            </ul>
+          </div>
 
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/HonestBlake">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/honestblake">LinkedIn</a></li>
-      <li><a href="resume.pdf">My Resume</a></li>
-    </ul>
-  </main>
-</body>
+          <div class="hero-visual" aria-label="Blake Worthington engineering profile">
+            <div class="portrait-card">
+              <div class="portrait-frame">
+                <img
+                  src="profile_pic.png"
+                  width="500"
+                  height="500"
+                  alt="Blake Worthington"
+                  fetchpriority="high"
+                />
+                <span class="portrait-scanline" aria-hidden="true"></span>
+              </div>
+              <div class="portrait-caption">
+                <span>Blake Worthington</span>
+                <span>Computer × Software</span>
+              </div>
+            </div>
+
+            <div class="floating-tag tag-code"><span aria-hidden="true">{ }</span> C++ / Systems</div>
+            <div class="floating-tag tag-hardware"><span aria-hidden="true">⌁</span> Embedded / Robotics</div>
+
+            <div class="system-card">
+              <div class="system-card-head">
+                <span>System profile</span>
+                <span>2026</span>
+              </div>
+              <ol>
+                <li><span>01</span> Software architecture</li>
+                <li><span>02</span> Cloud-connected products</li>
+                <li><span>03</span> Embedded system design</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-metrics page-shell" aria-label="At a glance">
+          <div><strong>3.75</strong><span>GPA</span></div>
+          <div><strong>2</strong><span>Degrees in progress</span></div>
+          <div><strong>C++23</strong><span>Open-source focus</span></div>
+          <p>Software logic <span aria-hidden="true">↔</span> Hardware instincts</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
