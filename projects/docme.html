@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Docme is Blake Worthington's in-progress C++ documentation generation system." />
+    <meta name="theme-color" content="#0e1011" />
+    <link rel="canonical" href="https://www.honestblake.com/projects/docme.html" />
+    <link rel="stylesheet" href="../custom.css" />
+    <title>Docme | Blake Worthington</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-shell site-shell">
+        <a class="brand" href="../index.html" aria-label="Blake Worthington home">
+          <span class="brand-mark" aria-hidden="true">B/W</span>
+          <span class="brand-copy"><strong>Blake Worthington</strong><small>Computer + Software Engineering</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../projects.html" aria-current="page">Projects</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../skills.html">Skills</a>
+          <a href="../contact.html">Contact</a>
+          <a class="resume-link" href="../resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <header class="project-hero">
+        <div class="project-hero-grid site-shell">
+          <div class="project-hero-copy">
+            <p class="breadcrumb"><a href="../projects.html">Projects</a> / Docme</p>
+            <p class="eyebrow">Documentation tooling</p>
+            <h1>Docme</h1>
+            <p>
+              An in-progress C++23 documentation generator built around configurable language handlers, a tagged comment
+              standard, and pluggable output renderers.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://github.com/HonestBlake/Docme" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+              <a class="button" href="../projects.html">All projects</a>
+            </div>
+          </div>
+
+          <aside class="project-hero-aside" aria-label="Docme project facts">
+            <dl class="fact-list">
+              <div><dt>Language</dt><dd>C++23</dd></div>
+              <div><dt>Build</dt><dd>CMake 4.3.3</dd></div>
+              <div><dt>Interface</dt><dd>Command line</dd></div>
+              <div><dt>Comment format</dt><dd>CDoc</dd></div>
+              <div><dt>License</dt><dd>MIT</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </header>
+
+      <div class="project-body">
+        <div class="project-body-grid site-shell">
+          <article class="project-article">
+            <section id="overview">
+              <span class="label">Overview</span>
+              <h2>Documentation generation as a configurable pipeline.</h2>
+              <p>
+                Docme is organized around a small engine that loads project settings, selects a language handler, parses
+                annotated source files, and passes the resulting documentation model to configured renderers. The intent
+                is to keep parsing rules separate from presentation so additional source languages and output formats can
+                be introduced independently.
+              </p>
+            </section>
+
+            <section id="pipeline">
+              <span class="label">Architecture</span>
+              <h2>Configuration to generated reference material.</h2>
+              <div class="system-diagram" aria-label="Docme generation pipeline">
+                <div><p><span>Configuration</span>Source paths, exclusions, handlers, and renderers.</p></div>
+                <div><p><span>Parser</span>A language handler converts tagged comments into a model.</p></div>
+                <div><p><span>Renderer</span>The model is prepared for Markdown or JSON output.</p></div>
+              </div>
+            </section>
+
+            <section id="configuration">
+              <span class="label">Configuration</span>
+              <h2>A project file keeps generation reproducible.</h2>
+              <p>
+                The repository includes a JSON configuration that identifies source folders, ignored paths, the output
+                destination, the CDoc language handler, and intended renderers.
+              </p>
+              <div class="code-card">
+                <div class="code-card-header"><span>docme.json</span><span>JSON</span></div>
+                <pre><code>{
+  <span class="code-string">"project_name"</span>: <span class="code-string">"MyProject"</span>,
+  <span class="code-string">"source"</span>: [<span class="code-string">""</span>],
+  <span class="code-string">"ignore"</span>: [<span class="code-string">"deps/"</span>, <span class="code-string">"build/"</span>],
+  <span class="code-string">"output"</span>: <span class="code-string">"path/to/output/dir"</span>,
+  <span class="code-string">"language_handler"</span>: [<span class="code-string">"cdoc"</span>],
+  <span class="code-string">"renderer"</span>: [<span class="code-string">"markdown"</span>, <span class="code-string">"json"</span>]
+}</code></pre>
+              </div>
+            </section>
+
+            <section id="scope">
+              <span class="label">Current scope</span>
+              <h2>An active project with the CLI path under development.</h2>
+              <p>
+                The codebase currently contains the core, configuration, plugin, generator, engine, and command-line
+                packages, together with a written CDoc tag specification. A graphical interface is represented in the
+                repository structure but is not implemented, and the generator remains in active development.
+              </p>
+              <p>
+                That status is intentional here: this page documents the architecture and current implementation without
+                presenting planned Markdown and JSON rendering as finished functionality.
+              </p>
+            </section>
+          </article>
+
+          <aside class="project-sidebar" aria-label="Project page navigation">
+            <nav class="sidebar-nav" aria-label="On this page">
+              <span>On this page</span>
+              <a href="#overview">Overview</a>
+              <a href="#pipeline">Architecture</a>
+              <a href="#configuration">Configuration</a>
+              <a href="#scope">Current scope</a>
+            </nav>
+            <a class="button repo-button" href="https://github.com/HonestBlake/Docme" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>
+          </aside>
+        </div>
+      </div>
+
+      <nav class="project-next" aria-label="Adjacent projects">
+        <div class="project-next-inner site-shell">
+          <a href="combat-robot.html">← Combat Robot</a>
+          <a href="better-dynamic-libraries.html">Next: Better Dynamic Libraries →</a>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell site-shell">
+        <p>© 2026 Blake Worthington</p>
+        <a href="../resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        <a href="../contact.html">Contact →</a>
+      </div>
+    </footer>
+  </body>
+</html>
