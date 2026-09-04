@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pure Log is Blake Worthington's flexible C++23 logging library." />
+    <meta name="theme-color" content="#0e1011" />
+    <link rel="canonical" href="https://www.honestblake.com/projects/pure-log.html" />
+    <link rel="stylesheet" href="../custom.css" />
+    <title>Pure Log | Blake Worthington</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-shell site-shell">
+        <a class="brand" href="../index.html" aria-label="Blake Worthington home">
+          <span class="brand-mark" aria-hidden="true">B/W</span>
+          <span class="brand-copy"><strong>Blake Worthington</strong><small>Computer + Software Engineering</small></span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../projects.html" aria-current="page">Projects</a>
+          <a href="../experience.html">Experience</a>
+          <a href="../skills.html">Skills</a>
+          <a href="../contact.html">Contact</a>
+          <a class="resume-link" href="../resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <header class="project-hero">
+        <div class="project-hero-grid site-shell">
+          <div class="project-hero-copy">
+            <p class="breadcrumb"><a href="../projects.html">Projects</a> / Pure Log</p>
+            <p class="eyebrow">Open-source C++ library</p>
+            <h1>Pure Log</h1>
+            <p>
+              A C++23 logging library with chainable metadata, formatted messages, custom severity levels, and multiple
+              output strategies.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://github.com/HonestBlake/Pure-Log" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+              <a class="button" href="../projects.html">All projects</a>
+            </div>
+          </div>
+
+          <aside class="project-hero-aside" aria-label="Pure Log project facts">
+            <dl class="fact-list">
+              <div><dt>Language</dt><dd>C++23</dd></div>
+              <div><dt>Build</dt><dd>CMake 4.0.2+</dd></div>
+              <div><dt>Interfaces</dt><dd>Headers and C++ modules</dd></div>
+              <div><dt>Release</dt><dd>v1.1.1</dd></div>
+              <div><dt>License</dt><dd>MIT</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </header>
+
+      <div class="project-body">
+        <div class="project-body-grid site-shell">
+          <article class="project-article">
+            <section id="overview">
+              <span class="label">Overview</span>
+              <h2>Composable logging without a large dependency stack.</h2>
+              <p>
+                Pure Log provides built-in and custom log levels, format-string messages, timestamps, source locations,
+                colors, and several output types. Applications can use a traditional header interface or C++ modules and
+                derive a project-specific singleton logger through the library's CRTP base.
+              </p>
+            </section>
+
+            <section id="design">
+              <span class="label">Design</span>
+              <h2>Message creation and output stay separate.</h2>
+              <div class="system-diagram" aria-label="Pure Log message flow">
+                <div><p><span>Log call</span>A level and formatted message create a log entry.</p></div>
+                <div><p><span>Metadata</span>Time and source location can be chained onto the entry.</p></div>
+                <div><p><span>Output</span>Console, file, or a custom sink receives the result.</p></div>
+              </div>
+            </section>
+
+            <section id="source">
+              <span class="label">Source example</span>
+              <h2>Metadata is added where it is useful.</h2>
+              <p>
+                Each logging call returns an entry that can be enriched without requiring the same metadata on every
+                line. The example application mixes formatted values, time, and source location.
+              </p>
+              <div class="code-card">
+                <div class="code-card-header"><span>example/example.cpp</span><span>C++</span></div>
+                <pre><code>debugger.<span class="code-call">log</span>(
+    <span class="code-string">"Invalid value passed to parser: {}"</span>, 3
+).<span class="code-call">time</span>();
+
+debugger.<span class="code-call">warn</span>(<span class="code-string">"This is a warning message."</span>)
+    .<span class="code-call">location</span>();
+
+debugger.<span class="code-call">info</span>(
+    <span class="code-string">"Informational message without additional data."</span>
+);</code></pre>
+              </div>
+            </section>
+
+            <section id="scope">
+              <span class="label">Current scope</span>
+              <h2>Flexible presentation with deliberately visible boundaries.</h2>
+              <p>
+                The library supports whole-message, part-specific, and level-specific formatting; buffered or immediate
+                console output; file output; and user-defined sinks. The current repository does not present benchmarks,
+                file rotation, or a documented thread-safety contract, so this portfolio does not imply those guarantees.
+              </p>
+            </section>
+          </article>
+
+          <aside class="project-sidebar" aria-label="Project page navigation">
+            <nav class="sidebar-nav" aria-label="On this page">
+              <span>On this page</span>
+              <a href="#overview">Overview</a>
+              <a href="#design">Design</a>
+              <a href="#source">Source example</a>
+              <a href="#scope">Current scope</a>
+            </nav>
+            <a class="button repo-button" href="https://github.com/HonestBlake/Pure-Log" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>
+          </aside>
+        </div>
+      </div>
+
+      <nav class="project-next" aria-label="Adjacent projects">
+        <div class="project-next-inner site-shell">
+          <a href="better-dynamic-libraries.html">← Better Dynamic Libraries</a>
+          <a href="../projects.html">All projects →</a>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell site-shell">
+        <p>© 2026 Blake Worthington</p>
+        <a href="../resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        <a href="../contact.html">Contact →</a>
+      </div>
+    </footer>
+  </body>
+</html>
