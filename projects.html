@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Selected C++, developer tooling, and embedded systems projects by Blake Worthington."
+    />
+    <meta name="theme-color" content="#0e1011" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://www.honestblake.com/projects.html" />
+    <link rel="stylesheet" href="custom.css" />
+    <title>Projects | Blake Worthington</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="nav-shell site-shell">
+        <a class="brand" href="index.html" aria-label="Blake Worthington home">
+          <span class="brand-mark" aria-hidden="true">B/W</span>
+          <span class="brand-copy">
+            <strong>Blake Worthington</strong>
+            <small>Computer + Software Engineering</small>
+          </span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="education.html">Education</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="skills.html">Skills</a>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <header class="page-hero">
+        <div class="site-shell">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Projects</p>
+          <h1>Projects</h1>
+          <p class="page-lead">
+            Selected work in modern C++, developer tooling, and embedded systems. Each page includes implementation
+            details and source from the repository.
+          </p>
+          <div class="page-meta" aria-label="Project areas">
+            <span>Open Source</span>
+            <span>C++</span>
+            <span>Embedded Systems</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="content-section" aria-labelledby="selected-projects-title">
+        <div class="site-shell section-rule">
+          <span class="label">Selected work</span>
+          <h2 id="selected-projects-title" class="visually-hidden">Selected projects</h2>
+
+          <div class="project-list">
+            <article class="project-feature">
+              <div class="project-copy">
+                <span class="project-number">01 / C++ library</span>
+                <h2>Simple CLI</h2>
+                <p>
+                  A C++23 command-line parser for type-safe flags, options, commands, aliases, positional arguments, and
+                  explicit result-based errors.
+                </p>
+                <ul class="tag-list" aria-label="Simple CLI technologies">
+                  <li>C++23</li><li>CMake</li><li>Library design</li>
+                </ul>
+                <a class="button" href="projects/simple-cli.html">Project details <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="project-visual">
+                <div class="code-card">
+                  <div class="code-card-header"><span>example/argumentParser.cpp</span><span>C++</span></div>
+                  <pre><code><span class="code-keyword">if</span> (<span class="code-keyword">auto</span> result = parser.<span class="code-call">addOption</span>(
+    {<span class="code-string">"-o"</span>, <span class="code-string">"--output"</span>}, output
+); !result) {
+    std::cout &lt;&lt; result.error().message();
+    <span class="code-keyword">return</span> 1;
+}</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-feature">
+              <div class="project-copy">
+                <span class="project-number">02 / Embedded systems</span>
+                <h2>Combat Robot</h2>
+                <p>
+                  MSP430 firmware for a competition robot and handheld controller, including infrared commands, motor
+                  control, joystick input, and servo actuation.
+                </p>
+                <ul class="tag-list" aria-label="Combat Robot technologies">
+                  <li>MSP430</li><li>C++20</li><li>Infrared</li><li>CMake</li>
+                </ul>
+                <a class="button" href="projects/combat-robot.html">Project details <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="project-visual">
+                <div class="system-diagram" aria-label="Combat Robot system flow">
+                  <div><p><span>Input</span>Dual joysticks<br />Flipper controls</p></div>
+                  <div><p><span>Link</span>Encoded<br />IR command</p></div>
+                  <div><p><span>Robot</span>Drive motors<br />Servo flipper</p></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-feature">
+              <div class="project-copy">
+                <span class="project-number">03 / Developer tooling</span>
+                <h2>Docme</h2>
+                <p>
+                  An in-progress C++23 documentation generator with configurable source discovery, language handlers,
+                  renderers, and a documented C/C++ comment-tag standard.
+                </p>
+                <ul class="tag-list" aria-label="Docme technologies">
+                  <li>C++23</li><li>C++ modules</li><li>JSON</li><li>Parsing</li>
+                </ul>
+                <a class="button" href="projects/docme.html">Project details <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="project-visual">
+                <div class="code-card">
+                  <div class="code-card-header"><span>docme.json</span><span>Configuration</span></div>
+                  <pre><code>{
+  <span class="code-string">"source"</span>: [<span class="code-string">"path/to/src"</span>],
+  <span class="code-string">"output"</span>: <span class="code-string">"path/to/docs"</span>,
+  <span class="code-string">"language_handler"</span>: [<span class="code-string">"cdoc"</span>],
+  <span class="code-string">"renderer"</span>: [<span class="code-string">"markdown"</span>, <span class="code-string">"json"</span>]
+}</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-feature">
+              <div class="project-copy">
+                <span class="project-number">04 / Systems library</span>
+                <h2>Better Dynamic Libraries</h2>
+                <p>
+                  An experimental C++23 wrapper around Windows and POSIX dynamic-library APIs with typed symbol lookup
+                  and explicit error results.
+                </p>
+                <ul class="tag-list" aria-label="Better Dynamic Libraries technologies">
+                  <li>C++23</li><li>Win32</li><li>POSIX</li><li>std::expected</li>
+                </ul>
+                <a class="button" href="projects/better-dynamic-libraries.html">Project details <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="project-visual">
+                <div class="code-card">
+                  <div class="code-card-header"><span>dynamicLibraries.hpp</span><span>Public API</span></div>
+                  <pre><code><span class="code-comment">// Load a library from a filesystem path</span>
+[[nodiscard]] <span class="code-keyword">static</span> <span class="code-type">DynamicLibrary</span>
+<span class="code-call">load</span>(<span class="code-keyword">const</span> std::filesystem::path&amp; file);
+
+<span class="code-keyword">template</span>&lt;<span class="code-keyword">typename</span> TFunction&gt;
+std::expected&lt;std::function&lt;TFunction&gt;, std::string&gt;
+<span class="code-call">getFunction</span>(<span class="code-keyword">const</span> std::string&amp; name) <span class="code-keyword">const</span>;</code></pre>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-feature">
+              <div class="project-copy">
+                <span class="project-number">05 / C++ library</span>
+                <h2>Pure Log</h2>
+                <p>
+                  A customizable C++23 logging library with chainable messages, built-in and custom levels, formatting,
+                  ANSI color, and pluggable output streams.
+                </p>
+                <ul class="tag-list" aria-label="Pure Log technologies">
+                  <li>C++23</li><li>CMake</li><li>CRTP</li><li>Logging</li>
+                </ul>
+                <a class="button" href="projects/pure-log.html">Project details <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="project-visual">
+                <div class="code-card">
+                  <div class="code-card-header"><span>example/example.cpp</span><span>C++</span></div>
+                  <pre><code>debugger.<span class="code-call">log</span>(
+  <span class="code-string">"Invalid value passed to parser: {}"</span>, 3
+).<span class="code-call">time</span>();
+
+debugger.<span class="code-call">warn</span>(
+  <span class="code-string">"This is a warning message."</span>
+).<span class="code-call">location</span>();
+
+debugger.<span class="code-call">info</span>(
+  <span class="code-string">"Informational message."</span>
+);</code></pre>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-shell site-shell">
+        <div class="footer-copy"><strong>Blake Worthington</strong><span>© 2026</span></div>
+        <div class="footer-contact" aria-label="Contact information">
+          <a href="mailto:blakecworthington@gmail.com">blakecworthington@gmail.com</a>
+          <a href="tel:+15412619127">(541) 261-9127</a>
+          <a href="https://www.linkedin.com/in/honestblake" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/HonestBlake" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
