@@ -310,6 +310,7 @@ figure {
 }
 
 .home-copy {
+  min-width: 0;
   max-width: 720px;
 }
 
@@ -1271,7 +1272,8 @@ figure {
   }
 
   .home-copy h1 {
-    font-size: clamp(3rem, 17vw, 4.7rem);
+    overflow-wrap: anywhere;
+    font-size: clamp(2.8rem, 13vw, 3.6rem);
   }
 
   .home-role {
@@ -1306,6 +1308,12 @@ figure {
   .footer-shell {
     display: flex;
     padding-block: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-copy h1 span {
+    display: block;
   }
 }
 
