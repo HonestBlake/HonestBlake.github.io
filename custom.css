@@ -28,6 +28,7 @@
 html {
   min-width: 320px;
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -802,6 +803,12 @@ figure {
   font-size: 0.58rem;
 }
 
+.system-diagram > div p {
+  margin-bottom: 0;
+  color: var(--text-soft);
+  font-size: 0.76rem;
+}
+
 .system-diagram > i {
   display: none;
 }
@@ -983,6 +990,16 @@ figure {
   margin-top: 1.5rem;
 }
 
+.project-article code:not(pre code) {
+  padding: 0.12em 0.35em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-raised);
+  color: var(--text-soft);
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+}
+
 .project-sidebar {
   position: sticky;
   top: 105px;
@@ -1066,7 +1083,9 @@ figure {
 
 .contact-email {
   display: inline-block;
+  max-width: 100%;
   margin-top: 1rem;
+  overflow-wrap: anywhere;
   color: var(--accent-strong);
   font-family: var(--font-display);
   font-size: clamp(1rem, 2vw, 1.35rem);
