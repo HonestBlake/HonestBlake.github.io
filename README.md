@@ -24,13 +24,14 @@ Then open `http://localhost:8000/`.
 ## Repository structure
 
 - `index.html` — introduction and primary navigation
-- `about.html` — background and education
+- `about.html` — background and contact information
+- `education.html` — degree programs and academic direction
 - `projects.html` — selected-project index
 - `projects/` — individual project case studies
 - `experience.html` — professional and research experience
 - `skills.html` — technical skills
-- `contact.html` — contact details and external profiles
 - `custom.css` — shared visual system, components, and responsive layouts
+- `assets/logos/` — locally hosted organization marks used for identification
 - `profile_pic.png` — profile portrait
 - `resume.pdf` — downloadable résumé
 - `CNAME` — custom-domain configuration for GitHub Pages
